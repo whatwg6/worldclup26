@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# WordClub26
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+小红书 2026 世界杯页面的 React + TypeScript + Vite 实现。页面重点是还原世界杯专题页的首屏、侧边栏、比赛预约和赛事聚焦模块，并用 Playwright 做视觉回归验证。
 
-Currently, two official plugins are available:
+![WordClub26 页面预览](./wordclub26.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 技术栈
 
-## React Compiler
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Vitest
+- Playwright
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 目录说明
 
-## Expanding the ESLint configuration
+- `src/App.tsx`：页面结构和数据驱动渲染。
+- `src/App.css`：页面布局、视觉样式和响应式样式。
+- `src/assets/`：页面使用的图片、Logo、图标、背景图等真实资源。
+- `assets-manifest.json`：资源登记清单，说明资源用途、来源和是否必须使用。
+- `e2e/`：Playwright 端到端和视觉回归测试。
+- `AGENTS.md`：AI 协作规则，包含资源使用、视觉还原和测试经验。
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 资源规则
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+本项目要求所有图片、Logo、图标、字标、背景图都来自 `src/assets`，并在 `assets-manifest.json` 中声明。
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+参考页中已有的资源必须提取真实文件后引用，不能用 CSS、emoji、canvas 或手写 SVG 临时模拟。小红书世界杯相关资源来源记录在 `assets-manifest.json` 的 `source` 字段中。
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 常用命令
+
+```bash
+pnpm install
+pnpm dev
+pnpm build
+pnpm test
+pnpm run e2e
+pnpm verify
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 视觉测试
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+`pnpm run e2e` 会运行 Playwright 测试。Playwright 的 web server 配置会先执行 `pnpm build`，再启动 `pnpm preview`，确保截图测试验证的是当前构建产物。
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+如果视觉资源或设计基准发生合理变化，可以更新快照：
+
+```bash
+pnpm exec playwright test --update-snapshots
+pnpm run e2e
 ```
+
+更新快照后必须再运行 `pnpm run e2e`，确认完整通过。
+
+## 开发注意事项
+
+- 先补真实资源，再调布局和样式。
+- 视觉差异优先查看 expected / actual / diff 图片。
+- 不要通过放宽阈值掩盖资源或布局问题。
+- 修改资源时同步更新 `assets-manifest.json`。
+- 不要回滚或覆盖与当前任务无关的用户改动。

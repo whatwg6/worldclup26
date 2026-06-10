@@ -1,0 +1,138 @@
+{
+  "assets": [
+    {
+      "path": "src/assets/wordclub26-reference.png",
+      "type": "screenshot",
+      "mustUse": true,
+      "source": "wordclub26.png"
+    },
+    {
+      "path": "src/assets/xhs-logo.png",
+      "type": "logo",
+      "mustUse": true
+    },
+    {
+      "path": "src/assets/xhs-worldcup-bg-live.webp",
+      "type": "background",
+      "mustUse": true,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-worldcup-title.png",
+      "type": "image",
+      "mustUse": true
+    },
+    {
+      "path": "src/assets/xhs-worldcup-nav-icon-dark.webp",
+      "type": "icon",
+      "mustUse": true,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-worldcup-nav-icon-light.webp",
+      "type": "icon",
+      "mustUse": false,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-worldcup-nav-text-dark.webp",
+      "type": "wordmark",
+      "mustUse": true,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-worldcup-nav-text-light.webp",
+      "type": "wordmark",
+      "mustUse": false,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-nav-home.svg",
+      "type": "icon",
+      "mustUse": true,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-nav-chat.svg",
+      "type": "icon",
+      "mustUse": true,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-nav-red.svg",
+      "type": "icon",
+      "mustUse": true,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-nav-live.svg",
+      "type": "icon",
+      "mustUse": true,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-nav-creator.svg",
+      "type": "icon",
+      "mustUse": true,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-nav-notification.svg",
+      "type": "icon",
+      "mustUse": true,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-nav-menu.svg",
+      "type": "icon",
+      "mustUse": true,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-nav-about.svg",
+      "type": "icon",
+      "mustUse": true,
+      "source": "https://www.xiaohongshu.com/worldcup26"
+    },
+    {
+      "path": "src/assets/xhs-reserve-title.png",
+      "type": "image",
+      "mustUse": false
+    },
+    {
+      "path": "src/assets/xhs-section-icon-one.png",
+      "type": "icon",
+      "mustUse": false
+    },
+    {
+      "path": "src/assets/xhs-section-icon-two.png",
+      "type": "icon",
+      "mustUse": false
+    },
+    {
+      "path": "src/assets/focus-france.png",
+      "type": "image",
+      "mustUse": true
+    },
+    {
+      "path": "src/assets/focus-croatia.png",
+      "type": "image",
+      "mustUse": true
+    },
+    {
+      "path": "src/assets/focus-spain.png",
+      "type": "image",
+      "mustUse": true
+    },
+    {
+      "path": "src/assets/focus-brazil.png",
+      "type": "image",
+      "mustUse": true
+    },
+    {
+      "path": "src/assets/focus-brazil-preview.png",
+      "type": "image",
+      "mustUse": true
+    }
+  ]
+}

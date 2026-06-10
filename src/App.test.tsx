@@ -1,17 +1,14 @@
 import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
 import App from './App'
 
 describe('App', () => {
-  it('increments the counter', async () => {
-    const user = userEvent.setup()
-
+  it('renders the World Cup landing UI', () => {
     render(<App />)
 
-    const button = screen.getByRole('button', { name: /count is 0/i })
-    await user.click(button)
-
-    expect(button).toHaveTextContent('Count is 1')
+    expect(screen.getByRole('heading', { name: /来小红书\s*看世界杯直播/i })).toBeVisible()
+    expect(screen.getByRole('heading', { name: /比赛预约/i })).toBeVisible()
+    expect(screen.getByRole('heading', { name: /赛事聚焦/i })).toBeVisible()
+    expect(screen.getByText('预约揭幕战直播')).toBeVisible()
   })
 })

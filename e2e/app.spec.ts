@@ -1,12 +1,10 @@
 import { expect, test } from '@playwright/test'
 
-test('loads the app and updates the counter', async ({ page }) => {
+test('loads the World Cup page', async ({ page }) => {
   await page.goto('/')
 
-  await expect(page.getByRole('heading', { name: 'Get started' })).toBeVisible()
-
-  const button = page.getByRole('button', { name: /count is 0/i })
-  await button.click()
-
-  await expect(page.getByRole('button', { name: /count is 1/i })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /来小红书\s*看世界杯直播/ })).toBeVisible()
+  await expect(page.getByText('墨西哥')).toBeVisible()
+  await expect(page.getByText('全部赛程')).toBeVisible()
+  await expect(page.getByRole('heading', { name: /赛事聚焦/ })).toBeVisible()
 })
