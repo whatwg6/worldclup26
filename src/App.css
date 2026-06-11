@@ -227,7 +227,7 @@
   z-index: 1;
   min-width: 0;
   min-height: 100vh;
-  padding: 0 24px 0 0;
+  padding: 0 17px 0 7px;
   overflow: hidden;
   box-sizing: border-box;
   background: transparent;
@@ -373,7 +373,7 @@
   z-index: 1;
   display: grid;
   justify-items: center;
-  padding-top: 10px;
+  padding-top: 34px;
 }
 
 .hero-title-wrap {
@@ -392,44 +392,44 @@ h1 {
 
 .hero-title-image {
   display: block;
-  width: 377px;
-  height: 92px;
+  width: 314px;
+  height: auto;
   object-fit: contain;
 }
 
 
 .hero-panel p {
-  margin: 22px 0 14px;
+  margin: 17px 0 12px;
   color: rgba(255, 255, 255, 0.66);
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 700;
 }
 
 .countdown {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .time-group {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 8px;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
-  font-size: 21px;
+  font-size: 17px;
   font-weight: 800;
 }
 
 .time-group strong {
   display: grid;
-  width: 72px;
-  height: 72px;
+  width: 47px;
+  height: 67px;
   place-items: center;
-  border-radius: 10px;
+  border-radius: 7px;
   background: rgba(81, 111, 161, 0.76);
   color: #fff;
-  font-size: 40px;
+  font-size: 31px;
   line-height: 1;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.12);
 }
@@ -439,23 +439,23 @@ h1 {
 }
 
 .reserve-hero {
-  width: 396px;
-  height: 74px;
-  margin-top: 22px;
+  width: 197px;
+  height: 40px;
+  margin-top: 19px;
   border: 0;
   border-radius: 999px;
   background: #e83d50;
   color: #fff;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 900;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
   cursor: pointer;
 }
 
 .match-section {
   position: relative;
   z-index: 2;
-  margin-top: -76px;
+  margin-top: 30px;
 }
 
 .match-section h2,
@@ -468,17 +468,19 @@ h1 {
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.match-section h2 span,
-.section-heading h2 span {
-  margin-right: 10px;
+.image-heading img {
+  display: block;
+  width: 204px;
+  height: auto;
+  object-fit: contain;
 }
 
 .match-carousel {
   display: grid;
-  grid-template-columns: 68px minmax(0, 1fr) 150px 68px;
+  grid-template-columns: 48px minmax(0, 1fr) 122px 48px;
   gap: 10px;
   align-items: stretch;
-  margin-top: 22px;
+  margin-top: 10px;
 }
 
 .match-list {
@@ -500,17 +502,26 @@ h1 {
 }
 
 .rail-button {
-  border-radius: 30px;
+  min-height: 151px;
+  border-radius: 18px;
   color: rgba(255, 255, 255, 0.66);
-  font-size: 44px;
+  font-size: 38px;
   font-weight: 900;
   cursor: pointer;
 }
 
+.rail-button img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  object-fit: contain;
+}
+
 .match-card {
-  min-height: 172px;
+  min-height: 151px;
   border-radius: 15px;
-  padding: 20px 18px 16px;
+  padding: 18px 18px 13px;
   box-sizing: border-box;
 }
 
@@ -519,7 +530,7 @@ h1 {
   justify-content: space-between;
   gap: 12px;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 800;
 }
 
@@ -533,41 +544,54 @@ h1 {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 12px;
-  margin-top: 16px;
+  margin-top: 11px;
 }
 
 .teams div {
   display: grid;
   justify-items: center;
-  gap: 8px;
+  gap: 6px;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 17px;
+  font-size: 13px;
   font-weight: 700;
 }
 
 .flag {
-  font-size: 32px;
-  line-height: 1;
+  display: block;
+  width: 32px;
+  height: 22px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16);
 }
 
 .teams strong {
   color: #fff;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 1;
 }
 
 .match-card button {
-  display: block;
-  min-width: 152px;
-  height: 40px;
-  margin: 18px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 99px;
+  height: 31px;
+  margin: 12px auto 0;
   border: 0;
   border-radius: 999px;
   background: rgba(58, 139, 238, 0.9);
   color: rgba(255, 255, 255, 0.86);
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 800;
   cursor: pointer;
+}
+
+.match-card button img {
+  width: 13px;
+  height: 13px;
+  filter: brightness(0) invert(1);
+  opacity: 0.86;
 }
 
 .all-schedule {
@@ -578,26 +602,29 @@ h1 {
   color: #fff;
 }
 
-.all-schedule span {
-  font-size: 34px;
+.all-schedule img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 9px;
+  filter: brightness(0) invert(1);
+  opacity: 0.88;
 }
 
 .all-schedule strong {
-  margin-top: 16px;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .all-schedule small {
   margin-top: 4px;
   color: rgba(255, 255, 255, 0.55);
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 800;
 }
 
 .focus-section {
   position: relative;
   z-index: 2;
-  margin-top: 34px;
+  margin-top: 32px;
 }
 
 .section-heading {
@@ -608,7 +635,7 @@ h1 {
 
 .section-heading a {
   color: rgba(255, 255, 255, 0.78);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 800;
   text-decoration: none;
 }
@@ -616,8 +643,8 @@ h1 {
 .focus-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(220px, 1fr));
-  gap: 72px;
-  margin-top: 34px;
+  gap: 34px;
+  margin-top: 10px;
 }
 
 .focus-card {
@@ -635,20 +662,6 @@ h1 {
   height: 100%;
   display: block;
   object-fit: cover;
-}
-
-.focus-card span {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.72);
-  color: #fff;
-  font-size: 14px;
 }
 
 @media (max-width: 1400px) {

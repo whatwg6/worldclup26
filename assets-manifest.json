@@ -1,12 +1,6 @@
 {
   "assets": [
     {
-      "path": "src/assets/wordclub26-reference.png",
-      "type": "screenshot",
-      "mustUse": true,
-      "source": "wordclub26.png"
-    },
-    {
       "path": "src/assets/xhs-logo.png",
       "type": "logo",
       "mustUse": true
@@ -133,6 +127,60 @@
       "path": "src/assets/focus-brazil-preview.png",
       "type": "image",
       "mustUse": true
+    },
+    {
+      "path": "src/assets/flag-mexico.png",
+      "type": "flag",
+      "mustUse": true,
+      "source": "https://flagcdn.com/w40/mx.png"
+    },
+    {
+      "path": "src/assets/flag-south-africa.png",
+      "type": "flag",
+      "mustUse": true,
+      "source": "https://flagcdn.com/w40/za.png"
+    },
+    {
+      "path": "src/assets/flag-south-korea.png",
+      "type": "flag",
+      "mustUse": true,
+      "source": "https://flagcdn.com/w40/kr.png"
+    },
+    {
+      "path": "src/assets/flag-czechia.png",
+      "type": "flag",
+      "mustUse": true,
+      "source": "https://flagcdn.com/w40/cz.png"
+    },
+    {
+      "path": "src/assets/flag-canada.png",
+      "type": "flag",
+      "mustUse": true,
+      "source": "https://flagcdn.com/w40/ca.png"
+    },
+    {
+      "path": "src/assets/flag-bosnia.png",
+      "type": "flag",
+      "mustUse": true,
+      "source": "https://flagcdn.com/w40/ba.png"
+    },
+    {
+      "path": "src/assets/flag-usa.png",
+      "type": "flag",
+      "mustUse": true,
+      "source": "https://flagcdn.com/w40/us.png"
+    },
+    {
+      "path": "src/assets/flag-paraguay.png",
+      "type": "flag",
+      "mustUse": true,
+      "source": "https://flagcdn.com/w40/py.png"
+    },
+    {
+      "path": "src/assets/icon-calendar-days.svg",
+      "type": "icon",
+      "mustUse": true,
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calendar-days.svg"
     }
   ]
 }

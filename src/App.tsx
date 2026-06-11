@@ -3,6 +3,15 @@ import focusBrazilPreview from './assets/focus-brazil-preview.png'
 import focusCroatia from './assets/focus-croatia.png'
 import focusFrance from './assets/focus-france.png'
 import focusSpain from './assets/focus-spain.png'
+import flagBosnia from './assets/flag-bosnia.png'
+import flagCanada from './assets/flag-canada.png'
+import flagCzechia from './assets/flag-czechia.png'
+import flagMexico from './assets/flag-mexico.png'
+import flagParaguay from './assets/flag-paraguay.png'
+import flagSouthAfrica from './assets/flag-south-africa.png'
+import flagSouthKorea from './assets/flag-south-korea.png'
+import flagUsa from './assets/flag-usa.png'
+import calendarIcon from './assets/icon-calendar-days.svg'
 import navAbout from './assets/xhs-nav-about.svg'
 import navChat from './assets/xhs-nav-chat.svg'
 import navCreator from './assets/xhs-nav-creator.svg'
@@ -12,6 +21,9 @@ import navMenu from './assets/xhs-nav-menu.svg'
 import navNotification from './assets/xhs-nav-notification.svg'
 import navRed from './assets/xhs-nav-red.svg'
 import xhsLogo from './assets/xhs-logo.png'
+import reserveTitle from './assets/xhs-reserve-title.png'
+import sectionArrowLeft from './assets/xhs-section-icon-one.png'
+import sectionArrowRight from './assets/xhs-section-icon-two.png'
 import worldcupBg from './assets/xhs-worldcup-bg-live.webp'
 import worldcupNavIcon from './assets/xhs-worldcup-nav-icon-dark.webp'
 import worldcupNavText from './assets/xhs-worldcup-nav-text-dark.webp'
@@ -33,8 +45,8 @@ type Match = {
   stage: string
   home: string
   away: string
-  homeFlag: string
-  awayFlag: string
+  homeFlag: { src: string; alt: string }
+  awayFlag: { src: string; alt: string }
   score?: string
   replay?: boolean
 }
@@ -45,32 +57,32 @@ const matches: Match[] = [
     stage: '小组赛 A组',
     home: '墨西哥',
     away: '南非',
-    homeFlag: '🇲🇽',
-    awayFlag: '🇿🇦',
+    homeFlag: { src: flagMexico, alt: '墨西哥国旗' },
+    awayFlag: { src: flagSouthAfrica, alt: '南非国旗' },
   },
   {
     time: '06月12日 10:00',
     stage: '小组赛 A组',
     home: '韩国',
     away: '捷克',
-    homeFlag: '🇰🇷',
-    awayFlag: '🇨🇿',
+    homeFlag: { src: flagSouthKorea, alt: '韩国国旗' },
+    awayFlag: { src: flagCzechia, alt: '捷克国旗' },
   },
   {
     time: '06月13日 03:00',
     stage: '小组赛 B组',
     home: '加拿大',
     away: '波黑',
-    homeFlag: '🇨🇦',
-    awayFlag: '🇧🇦',
+    homeFlag: { src: flagCanada, alt: '加拿大国旗' },
+    awayFlag: { src: flagBosnia, alt: '波黑国旗' },
   },
   {
     time: '06月13日 09:00',
     stage: '小组赛 D组',
     home: '美国',
     away: '巴拉圭',
-    homeFlag: '🇺🇸',
-    awayFlag: '🇵🇾',
+    homeFlag: { src: flagUsa, alt: '美国国旗' },
+    awayFlag: { src: flagParaguay, alt: '巴拉圭国旗' },
   },
 ]
 
@@ -190,12 +202,12 @@ function App() {
         </section>
 
         <section className="match-section" aria-labelledby="match-title">
-          <h2 id="match-title">
-            <span>📣</span> 比赛预约
+          <h2 id="match-title" className="image-heading">
+            <img src={reserveTitle} alt="比赛预约" />
           </h2>
           <div className="match-carousel">
             <button className="rail-button" type="button" aria-label="上一组比赛">
-              ‹
+              <img src={sectionArrowLeft} alt="" aria-hidden="true" />
             </button>
             <div className="match-list">
               {matches.map((match) => (
@@ -206,42 +218,42 @@ function App() {
                   </div>
                   <div className="teams">
                     <div>
-                      <span className="flag">{match.homeFlag}</span>
+                      <img className="flag" src={match.homeFlag.src} alt={match.homeFlag.alt} />
                       <small>{match.home}</small>
                     </div>
                     <strong>{match.score ?? 'VS'}</strong>
                     <div>
-                      <span className="flag">{match.awayFlag}</span>
+                      <img className="flag" src={match.awayFlag.src} alt={match.awayFlag.alt} />
                       <small>{match.away}</small>
                     </div>
                   </div>
-                  <button type="button">{match.replay ? '▣ 查看回放' : '▦ 预约'}</button>
+                  <button type="button">
+                    <img src={calendarIcon} alt="" aria-hidden="true" />
+                    {match.replay ? '查看回放' : '预约'}
+                  </button>
                 </article>
               ))}
             </div>
             <article className="all-schedule">
-              <span>▦</span>
+              <img src={calendarIcon} alt="" aria-hidden="true" />
               <strong>全部赛程</strong>
               <small>105场</small>
             </article>
             <button className="rail-button" type="button" aria-label="下一组比赛">
-              ›
+              <img src={sectionArrowRight} alt="" aria-hidden="true" />
             </button>
           </div>
         </section>
 
         <section className="focus-section" aria-labelledby="focus-title">
           <div className="section-heading">
-            <h2 id="focus-title">
-              <span>🗓</span> 赛事聚焦
-            </h2>
+            <h2 id="focus-title">赛事聚焦</h2>
             <a href="#more-focus">查看更多 »</a>
           </div>
           <div className="focus-grid">
             {focusCards.map((card) => (
               <article className="focus-card" key={card.title}>
                 <img src={card.image} alt={card.title} />
-                <span aria-hidden="true">▶</span>
               </article>
             ))}
           </div>
