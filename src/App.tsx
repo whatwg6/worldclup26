@@ -145,13 +145,13 @@ function App() {
         <div className="sidebar-footer">
           <a href="#more">
             <span className="footer-icon">
-              <NavIcon name="menu" />
+              <img src={navMenu} alt="" aria-hidden="true" />
             </span>
             更多
           </a>
           <a href="#about">
             <span className="footer-icon">
-              <NavIcon name="info" />
+              <img src={navAbout} alt="" aria-hidden="true" />
             </span>
             关于我们
           </a>
