@@ -16,7 +16,6 @@ import worldcupBg from './assets/xhs-worldcup-bg-live.webp'
 import worldcupNavIcon from './assets/xhs-worldcup-nav-icon-dark.webp'
 import worldcupNavText from './assets/xhs-worldcup-nav-text-dark.webp'
 import worldcupTitle from './assets/xhs-worldcup-title.png'
-import wordclubReference from './assets/wordclub26-reference.png'
 import './App.css'
 
 const navItems = [
@@ -115,7 +114,6 @@ function NavIcon({ name }: { name: string }) {
 function App() {
   return (
     <main className="worldcup-shell">
-      <img className="reference-shot" src={wordclubReference} alt="" aria-hidden="true" />
       <img className="page-backdrop" src={worldcupBg} alt="" aria-hidden="true" />
       <aside className="sidebar" aria-label="小红书世界杯导航">
         <a className="sidebar-logo" href="#worldcup" aria-label="小红书">

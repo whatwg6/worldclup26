@@ -8,18 +8,6 @@
   color: #fff;
 }
 
-.reference-shot {
-  position: fixed;
-  inset: 0;
-  z-index: 20;
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  object-fit: fill;
-  pointer-events: none;
-  user-select: none;
-}
-
 .page-backdrop {
   position: absolute;
   top: 0;
